@@ -43,13 +43,38 @@ _Perexma_ project is a **Per**sonal **Ex**penses **Ma**nager built with Django.
 
 ### Modules
 1. Admin (django default)
-    - Product type
-        - Savings Account
-        - Fiducuenta
-        - Plan Semilla
-        - Crypto
-1. ...
-
+    + Users
+    + Income type: Base Salary, AFC, etc.
+    + Expense type: Food, Health, etc. 
+    + Settings: cycle
+    + Product type
+1. Home
+    + Insights: 
+        - What is left to be spent ("Wiiii")
+        - Pending to be paid for current cycle
+    + Summary: Upcoming bills
+    + Summary I have: `X` of resources, `Y` of savings and `Z` of expenses
+1. Register
+    + Income & Expenses
+    + Loans & Borrowings
+    + Resources (capital)
+    + Savings
+1. Analytics
+    + Display expenses: monthly | weekly | daily | custom
+    + Pie chart per type (as spreadsheet)
+1. Bills
+    + Pending bills (blue table)
+    + Paying bills: add payment and send email
+1. Page for green table: IN|OUT|DIFF
+1. Investment
+    + Won/loss of products such as Cta Ahorro, Fiducuenta, Plan Semilla
+    + Crypto
+1. Credit card shopping
+    - Type "close date"
+    - Type "due date"
+    - Save automatically the payments done with that product
+1. Cycle forecast
+...
 
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
