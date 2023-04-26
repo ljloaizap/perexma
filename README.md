@@ -76,6 +76,11 @@ _Perexma_ project is a **Per**sonal **Ex**penses **Ma**nager built with Django.
 1. Cycle forecast
 ...
 
+### Mockups
+:art: Figma prototype, [here](https://www.figma.com/proto/jpNcJYN0gp24hvZocYYDtg/Perexma?node-id=3-4&scaling=scale-down&page-id=0%3A1)
+
+<br>
+
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
 2. [Complete list](https://gist.github.com/rxaviers/7360908) of github markdown emoji markup :v:
