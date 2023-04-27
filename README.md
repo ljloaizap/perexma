@@ -39,26 +39,27 @@ _Perexma_ project is a **Per**sonal **Ex**penses **Ma**nager built with Django.
 ### Open questions
 1. :question: Where to record Pereira expenses? This is a pretty custom expense. How can make it some sort of generic? Especially for what I need to know the expenses list per month as not all months have exactly the same expenses.
 1. Voice recording to get text. Is it possible to translate that into API requests? In the same fashion as Selenium bots
-1. ...
 
 ### Modules
-1. Admin (django default)
+List of modules. The ones with :heavy_check_mark: mark are already in Figma.
+1. ✓ Admin (django default)
     + Users
-    + Income type: Base Salary, AFC, etc.
-    + Expense type: Food, Health, etc. 
-    + Settings: cycle
-    + Product type
-1. Home
-    + Insights: 
-        - What is left to be spent ("Wiiii")
-        - Pending to be paid for current cycle
-    + Summary: Upcoming bills
-    + Summary I have: `X` of resources, `Y` of savings and `Z` of expenses
-1. Register
-    + Income & Expenses
+    + Movement type: 
+        - Income: Base Salary, AFC, Crypto, etc.
+        - Expense type: Food, Health, Education, Home Bills, etc. 
+    + Resource: Cash, Savings account, Credit Card, Crypto, Wallet, etc. (purple table)
+    + Currency: COP, USD, EUR, ARS...
+    - Saving: Lolo, Predial, Declaración, Babe, etc.
+    + Settings:
+        - cycle
+1. ✓ Home
+    + ✓ Insights: 
+        - ✓ What is left to be spent ("Wiiii")
+    + ✓ Summary: Upcoming bills
+1. :wrench: Register
+    + ✓ Income & Expenses
     + Loans & Borrowings
-    + Resources (capital)
-    + Savings
+    + ✓ Savings
 1. Analytics
     + Display expenses: monthly | weekly | daily | custom
     + Pie chart per type (as spreadsheet)
@@ -77,7 +78,13 @@ _Perexma_ project is a **Per**sonal **Ex**penses **Ma**nager built with Django.
 ...
 
 ### Mockups
-:art: Figma prototype, [here](https://www.figma.com/proto/jpNcJYN0gp24hvZocYYDtg/Perexma?node-id=3-4&scaling=scale-down&page-id=0%3A1)
+:art: [WIP] Figma prototype, [here](https://www.figma.com/proto/jpNcJYN0gp24hvZocYYDtg/Perexma?node-id=3-4&scaling=scale-down&page-id=0%3A1)
+
+<br>
+
+### Entity-Relation diagram
+:art: [WIP], [here](https://lucid.app/lucidchart/360d6741-911d-4a84-b0be-ecbaf6025a53/edit?viewport_loc=569%2C340%2C1696%2C840%2C0_0&invitationId=inv_092a0e6b-3605-4f66-b7a1-b117aba9af66)
+
 
 <br>
 
