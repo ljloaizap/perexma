@@ -81,24 +81,21 @@ List of modules. The ones with :heavy_check_mark: mark are already in Figma.
 ### Mockups
 :art: [WIP] Figma prototype, [here](https://www.figma.com/proto/jpNcJYN0gp24hvZocYYDtg/Perexma?node-id=3-4&scaling=scale-down&page-id=0%3A1)
 
-<br>
 
 ### Entity-Relation diagram
 :art: [WIP], [here](https://lucid.app/lucidchart/360d6741-911d-4a84-b0be-ecbaf6025a53/edit?viewport_loc=569%2C340%2C1696%2C840%2C0_0&invitationId=inv_092a0e6b-3605-4f66-b7a1-b117aba9af66)
 
 
-<br>
-
 # Database
+
 ## Start postgres instance
 
-This command will run an image called "postgres_img" and will pass env var `POSTGRES_PASSWORD` from `.env` file through `--build-arg` argument.
+This command will build an image called "postgres" based on `Dockerfile` file.
 ```
 docker build -t postgres .
-
 ```
 
-There's another way in case we need to load password from .env file
+There's another way in case we need to load password using env var `POSTGRES_PASSWORD` from `.env` file through `--build-arg` argument.
 ```
 sudo docker build --build-arg POSTGRES_PASSWORD=$(cat .env | grep POSTGRES_PASSWORD | cut -d'=' -f2) -t postgres_img .
 ```
@@ -113,6 +110,13 @@ From command above
 - `--name postgres_perexma` indicates the new container name
 - `postgres` at the end, refers to the docker image.
 
+
+# Developer
+## Env vars
+Create `.env` file with the following variables:
+```
+POSTGRES_PASSWORD=<value>
+```
 
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
