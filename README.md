@@ -44,7 +44,7 @@ _Perexma_ project is a **Per**sonal **Ex**penses **Ma**nager built with Django.
 List of modules. The ones with :heavy_check_mark: mark are already in Figma.
 1. ✓ Admin (django default)
     + Users
-    + Movement type: 
+    + Transaction (movement type):
         - Income: Base Salary, AFC, Crypto, etc.
         - Expense type: Food, Health, Education, Home Bills, etc. 
     + Resource: Cash, Savings account, Credit Card, Crypto, Wallet, etc. (purple table)
@@ -58,15 +58,16 @@ List of modules. The ones with :heavy_check_mark: mark are already in Figma.
     + ✓ Summary: Upcoming bills
 1. :wrench: Register
     + ✓ Income & Expenses
-    + Loans & Borrowings
+    + :question: Loans & Borrowings
     + ✓ Savings
-1. Analytics
+1. :question: Analytics
     + Display expenses: monthly | weekly | daily | custom
     + Pie chart per type (as spreadsheet)
 1. Bills
-    + Pending bills (blue table)
-    + Paying bills: add payment and send email
+    + ✓ Pending bills (blue table)
+    + :question: Paying bills: add payment and send email
 1. Page for green table: IN|OUT|DIFF
+    + :question: create db view to get this info
 1. Investment
     + Won/loss of products such as Cta Ahorro, Fiducuenta, Plan Semilla
     + Crypto
@@ -87,6 +88,31 @@ List of modules. The ones with :heavy_check_mark: mark are already in Figma.
 
 
 <br>
+
+# Database
+## Start postgres instance
+
+This command will run an image called "postgres_img" and will pass env var `POSTGRES_PASSWORD` from `.env` file through `--build-arg` argument.
+```
+docker build -t postgres .
+
+```
+
+There's another way in case we need to load password from .env file
+```
+sudo docker build --build-arg POSTGRES_PASSWORD=$(cat .env | grep POSTGRES_PASSWORD | cut -d'=' -f2) -t postgres_img .
+```
+
+## Run docker container
+
+This command will run a container called `postgres_perexma` in background / _daemon_ mode (-d). 
+```
+docker run -d --name postgres_perexma --env-file .env -p 5432:5432 postgres
+```
+From command above
+- `--name postgres_perexma` indicates the new container name
+- `postgres` at the end, refers to the docker image.
+
 
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
