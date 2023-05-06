@@ -115,8 +115,16 @@ From command above
 ## Env vars
 Create `.env` file with the following variables:
 ```
+SECRET_KEY=<value>
+POSTGRES_HOST=<value>
+POSTGRES_PORT=<value>
+POSTGRES_DB_NAME=<value>
+POSTGRES_USER=<value>
 POSTGRES_PASSWORD=<value>
 ```
+## Summary list:
+- Django proyect: perexmadj
+- Django app: 
 
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
