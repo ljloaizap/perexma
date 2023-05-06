@@ -112,7 +112,12 @@ From command above
 
 
 # Developer
-## Env vars
+
+## Dev dict
+- Django proyect: perexmadj
+- Django app: perexmapp
+
+## Let's get started
 Create `.env` file with the following variables:
 ```
 SECRET_KEY=<value>
@@ -122,9 +127,11 @@ POSTGRES_DB_NAME=<value>
 POSTGRES_USER=<value>
 POSTGRES_PASSWORD=<value>
 ```
-## Summary list:
-- Django proyect: perexmadj
-- Django app: perexmapp
+
+Install dependencies
+```
+pip install -r _requirements.txt  # suffix _ to prevent pipenv from take it
+```
 
 ## Some Django commands
 ```
@@ -133,6 +140,7 @@ python manage.py makemigrations --dry-run  # show what migrations would be made
 python manage.py makemigrations
 python manage.py sqlmigrate perexmapp 0001_initial  # see sql script per migration
 python manage.py showmigrations
+python manage.py migrate
 
 # For Project
 python manage.py check
