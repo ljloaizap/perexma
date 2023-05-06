@@ -124,7 +124,19 @@ POSTGRES_PASSWORD=<value>
 ```
 ## Summary list:
 - Django proyect: perexmadj
-- Django app: 
+- Django app: perexmapp
+
+## Some Django commands
+```
+# For DB
+python manage.py makemigrations --dry-run  # show what migrations would be made
+python manage.py makemigrations
+python manage.py sqlmigrate perexmapp 0001_initial  # see sql script per migration
+python manage.py showmigrations
+
+# For Project
+python manage.py check
+```
 
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
