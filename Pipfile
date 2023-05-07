@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 psycopg2-binary = "==2.9.6"
 django = "==4.2.1"
+pytest-django = "*"
+pytest = "*"
 
 [dev-packages]
 

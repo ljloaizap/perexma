@@ -147,6 +147,13 @@ python manage.py dbshell  # run SQL shell interactively
 python manage.py check
 ```
 
+## Tests
+```
+pytest perexmapp/tests.py
+pytest perexmapp/tests.py -s -v
+```
+You can prevent the test databases from being destroyed by using the test --keepdb option. 
+
 ## Django admin
 - admin | admin | admin@perexma.com
 
