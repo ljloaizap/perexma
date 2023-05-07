@@ -111,7 +111,7 @@ From command above
 - `postgres` at the end, refers to the docker image.
 
 
-# Developer
+# Developer Jungle
 
 ## Dev dict
 - Django proyect: perexmadj
@@ -141,10 +141,15 @@ python manage.py makemigrations
 python manage.py sqlmigrate perexmapp 0001_initial  # see sql script per migration
 python manage.py showmigrations
 python manage.py migrate
+python manage.py dbshell  # run SQL shell interactively 
 
-# For Project
+# For Django project
 python manage.py check
 ```
+
+## Django admin
+- admin | admin | admin@perexma.com
+
 
 # Useful links
 1. [Gitmoji.dev](https://gitmoji.dev/), an emoji guide for your commit messages :sunglasses:
