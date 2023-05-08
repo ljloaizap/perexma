@@ -9,6 +9,7 @@ from django.utils import timezone
 
 class BaseModel(models.Model):
     """Base model for db structure"""
+
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True)
@@ -20,21 +21,30 @@ class BaseModel(models.Model):
 
     def delete(self, using=None, keep_parents=False):
         """Soft-delete any record"""
+
         self.deleted_at = timezone.now()
         self.deleted = True
         self.save()
 
     def undelete(self):
         """Undo soft-delete operation"""
+
         self.deleted_at = None
         self.deleted = False
         self.save()
 
 
 class Category(BaseModel):
-    """Category when a transaction fits in"""
+    """Category where a transaction fits in"""
 
     name = models.CharField(max_length=60)
+
+    def __str__(self):
+        return str(self.name)
+
+    class Meta():
+        """PH"""
+        verbose_name_plural = 'Categories'
 
 
 class Currency(BaseModel):
