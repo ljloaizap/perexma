@@ -157,6 +157,17 @@ pytest perexmapp/tests/ -s -v
 ```
 You can prevent the test databases from being destroyed by using the test `--keepdb` option. 
 
+
+### Tests failure
+In case of failure while running the tests
+```
+django.core.exceptions.ImproperlyConfigured: Requested setting INSTALLED_APPS, but settings are not configured. You must either define the environment variable DJANGO_SETTINGS_MODULE or call settings.configure() before accessing settings.
+```
+Then, define the request _environment variable_:
+```
+export DJANGO_SETTINGS_MODULE=perexmadj.settings
+```
+
 ### Tests Coverage
 Cd `/src/` dir and then run:
 ```
