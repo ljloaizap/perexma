@@ -148,11 +148,20 @@ python manage.py check
 ```
 
 ## Tests
+
+### Tests execution
 ```
-pytest perexmapp/tests.py
-pytest perexmapp/tests.py -s -v
+pytest
+pytest perexmapp/tests/
+pytest perexmapp/tests/ -s -v
 ```
-You can prevent the test databases from being destroyed by using the test --keepdb option. 
+You can prevent the test databases from being destroyed by using the test `--keepdb` option. 
+
+### Tests Coverage
+Cd `/src/` dir and then run:
+```
+sh utils/_coverage.sh
+```
 
 ## Django admin
 - admin | admin | admin@perexma.com
