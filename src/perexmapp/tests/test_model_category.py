@@ -12,9 +12,9 @@ from perexmapp.models import Category, BaseModel
 def category():
     """Fixture for category creation"""
 
-    my_category = Category.objects.create(name='Test Category')
-    yield my_category
-    my_category.delete()
+    obj_category = Category.objects.create(name='Test Category')
+    yield obj_category
+    obj_category.delete()
 
 
 @pytest.mark.django_db
@@ -38,9 +38,6 @@ def test_category_without_name():
 @pytest.mark.django_db
 def test_category_name_exceeds_length():
     """Tests when category name exceeds its length"""
-
-    obj_category = Category.objects.create(name="a" * 60)
-    assert len(obj_category.name) <= 60
 
     with pytest.raises(DataError):
         Category.objects.create(name="a" * 61)

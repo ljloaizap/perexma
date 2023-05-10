@@ -53,6 +53,13 @@ class Currency(BaseModel):
     code = models.CharField(max_length=10)
     name = models.CharField(max_length=50)
 
+    def __str__(self):
+        return str(self.code)
+
+    class Meta():
+        """PH"""
+        verbose_name_plural = 'Currencies'
+
 
 class Resource(BaseModel):
     """Resources"""
